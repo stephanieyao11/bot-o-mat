@@ -85,11 +85,17 @@ public class ControllerTask extends ControllerConfig{
 
         if (start1) {
             robotName.setText("Tasks for " + model.getName());
-            task1.setText(taskArr[(int) (Math.random() * taskArr.length)]);
+            if (!(model.getNewTask().isEmpty() || model.getNewTask().isBlank())) {
+                task1.setText(model.getNewTask());
+                taskMap.put(model.getNewTask(), model.getNewTaskTime());
+            } else {
+                task1.setText(taskArr[(int) (Math.random() * taskArr.length)]);
+            }
             task2.setText(taskArr[(int) (Math.random() * taskArr.length)]);
             task3.setText(taskArr[(int) (Math.random() * taskArr.length)]);
             task4.setText(taskArr[(int) (Math.random() * taskArr.length)]);
             task5.setText(taskArr[(int) (Math.random() * taskArr.length)]);
+
 
             if (!(model1.getName().isBlank() || model1.getName().isEmpty())) {
                 robotName1.setText("Tasks for " + model1.getName());
@@ -113,6 +119,15 @@ public class ControllerTask extends ControllerConfig{
             } catch (InterruptedException ie) {
                 Thread.currentThread().interrupt();
             }
+            Random rand = new Random();
+            int rselector = rand.nextInt(10);
+            if (rselector > 5 && rselector != 0 && model.getScore() >= 10) {
+                Alert a1 = new Alert(Alert.AlertType.NONE,
+                        "Your robot broke down! Score decreased by "
+                                + rselector + " points.", ButtonType.OK);
+                model.decScore(rselector);
+                a1.show();
+            }
             model.incScore(10);
             completedSlot1.setText(task1.getText());
             task1.setText("Complete!");
@@ -130,6 +145,15 @@ public class ControllerTask extends ControllerConfig{
             } catch (InterruptedException ie) {
                 Thread.currentThread().interrupt();
             }
+            Random rand = new Random();
+            int rselector = rand.nextInt(10);
+            if (rselector < 5 && rselector != 0 && model.getScore() >= 10) {
+                Alert a1 = new Alert(Alert.AlertType.NONE,
+                        "Your robot broke down! Score decreased by "
+                                + rselector + " points.", ButtonType.OK);
+                model.decScore(rselector);
+                a1.show();
+            }
             model.incScore(10);
             completedSlot2.setText(task2.getText());
             task2.setText("Complete!");
@@ -146,6 +170,15 @@ public class ControllerTask extends ControllerConfig{
             } catch (InterruptedException ie) {
                 Thread.currentThread().interrupt();
             }
+            Random rand = new Random();
+            int rselector = rand.nextInt(10);
+            if (rselector > 5 && rselector != 0) {
+                Alert a1 = new Alert(Alert.AlertType.NONE,
+                        "Your robot received the new update! Score increased by "
+                                + rselector + " points.", ButtonType.OK);
+                model.incScore(rselector);
+                a1.show();
+            }
             model.incScore(10);
             completedSlot3.setText(task3.getText());
             task3.setText("Complete!");
@@ -161,6 +194,15 @@ public class ControllerTask extends ControllerConfig{
                 Thread.sleep(taskMap.get(task4.getText()));
             } catch (InterruptedException ie) {
                 Thread.currentThread().interrupt();
+            }
+            Random rand = new Random();
+            int rselector = rand.nextInt(10);
+            if (rselector < 5 && rselector != 0) {
+                Alert a1 = new Alert(Alert.AlertType.NONE,
+                        "Your robot received the new update! Score increased by "
+                                + rselector + " points.", ButtonType.OK);
+                model.incScore(rselector);
+                a1.show();
             }
             model.incScore(10);
             completedSlot4.setText(task4.getText());
@@ -194,6 +236,15 @@ public class ControllerTask extends ControllerConfig{
             } catch (InterruptedException ie) {
                 Thread.currentThread().interrupt();
             }
+            Random rand = new Random();
+            int rselector = rand.nextInt(10);
+            if (rselector < 5 && rselector != 0) {
+                Alert a1 = new Alert(Alert.AlertType.NONE,
+                        "Your robot received the new update! Score increased by "
+                                + rselector + " points.", ButtonType.OK);
+                model1.incScore(rselector);
+                a1.show();
+            }
             model1.incScore(10);
             completedSlot6.setText(task6.getText());
             task6.setText("Complete!");
@@ -209,6 +260,15 @@ public class ControllerTask extends ControllerConfig{
                 Thread.sleep(taskMap.get(task6.getText()));
             } catch (InterruptedException ie) {
                 Thread.currentThread().interrupt();
+            }
+            Random rand = new Random();
+            int rselector = rand.nextInt(10);
+            if (rselector > 5 && rselector != 0) {
+                Alert a1 = new Alert(Alert.AlertType.NONE,
+                        "Your robot received the new update! Score increased by "
+                                + rselector + " points.", ButtonType.OK);
+                model1.incScore(rselector);
+                a1.show();
             }
             model1.incScore(10);
             completedSlot7.setText(task7.getText());
@@ -226,6 +286,15 @@ public class ControllerTask extends ControllerConfig{
             } catch (InterruptedException ie) {
                 Thread.currentThread().interrupt();
             }
+            Random rand = new Random();
+            int rselector = rand.nextInt(10);
+            if (rselector < 5 && model.getScore() >= 10 && rselector != 0) {
+                Alert a1 = new Alert(Alert.AlertType.NONE,
+                        "Your robot broke down! Score decreased by "
+                                + rselector + " points.", ButtonType.OK);
+                model1.decScore(rselector);
+                a1.show();
+            }
             model1.incScore(10);
             completedSlot8.setText(task8.getText());
             task8.setText("Complete!");
@@ -241,6 +310,15 @@ public class ControllerTask extends ControllerConfig{
                 Thread.sleep(taskMap.get(task9.getText()));
             } catch (InterruptedException ie) {
                 Thread.currentThread().interrupt();
+            }
+            Random rand = new Random();
+            int rselector = rand.nextInt(10);
+            if (rselector > 5 && model.getScore() >= 10 && rselector != 0) {
+                Alert a1 = new Alert(Alert.AlertType.NONE,
+                        "Your robot broke down! Score decreased by "
+                                + rselector + " points.", ButtonType.OK);
+                model1.decScore(rselector);
+                a1.show();
             }
             model1.incScore(10);
             completedSlot9.setText(task9.getText());

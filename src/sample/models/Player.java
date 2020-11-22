@@ -18,6 +18,8 @@ public class Player {
     private String name;
     private String robotType;
     private int score;
+    private String newTask;
+    private int newTaskTime;
 
 
     public Player(String name, String robotType, int score) {
@@ -35,7 +37,28 @@ public class Player {
         this.score += additionalScore;
     }
 
+    public void decScore(int subtractedScore) {
+        this.score -= subtractedScore;
+    }
+
     public int getScore() {
         return this.score;
     }
+
+    public String getNewTask() {
+        return this.newTask;
+    }
+
+    public void setNewTask(String inputTask) {
+        this.newTask = inputTask;
+    }
+
+    public int getNewTaskTime() {
+        return this.newTaskTime;
+    }
+
+    public void setNewTaskTime(int inputTaskTime) {
+        this.newTaskTime = inputTaskTime;
+    }
+
 }

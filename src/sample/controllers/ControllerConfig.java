@@ -28,6 +28,11 @@ public class ControllerConfig extends ControllerStart {
     @FXML
     private ComboBox robotCombo1;
 
+    @FXML
+    private TextField newTask;
+
+    @FXML
+    private TextField newTaskTime;
 
     @FXML
     public void setNext(ActionEvent actionEvent) throws IOException {
@@ -39,6 +44,10 @@ public class ControllerConfig extends ControllerStart {
             model = new Player(text, value, 0);
             if (!(text1.isBlank() || text1.isEmpty())) {
                 model1 = new Player(text1, value1, 0);
+            }
+            if (!(newTask.getText().isBlank() || newTask.getText().isEmpty())) {
+                model.setNewTask(newTask.getText());
+                model.setNewTaskTime(Integer.valueOf(newTaskTime.getText()));
             }
             Parent root = FXMLLoader.load(getClass().getResource("../views/task.fxml"));
             stage.setScene(new Scene(root, 600, 494));

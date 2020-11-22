@@ -21,6 +21,11 @@
                         <Font size="38.0" />
                     </font>
                 </Label>
+                <Label layoutX="184.0" layoutY="83.0" text="Enter 2 players!" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
                 <Label layoutX="51.0" layoutY="100.0" text="Name" textFill="WHITE">
                     <font>
                         <Font size="18.0" />
@@ -39,6 +44,13 @@
                         </FXCollections>
                     </items>
                 </ComboBox>
+                <Label layoutX="50.0" layoutY="270.0" text="Add task and task time (in milliseconds)" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="newTask" layoutX="50.0" layoutY="300.0" prefHeight="23.0" prefWidth="114.0" promptText="Add task" />
+                <TextField fx:id="newTaskTime" layoutX="200.0" layoutY="300.0" prefHeight="23.0" prefWidth="114.0" promptText="Add task time" />
 
 
                 <TextField fx:id="name1" layoutX="50.0" layoutY="200.0" prefHeight="23.0" prefWidth="114.0" promptText="Enter Name" />
@@ -57,7 +69,7 @@
 
 
 
-                <Button fx:id="next" layoutX="279.0" layoutY="342.0" mnemonicParsing="false" onAction="#setNext" text="Next" />
+                <Button fx:id="next" layoutX="279.0" layoutY="370.0" mnemonicParsing="false" onAction="#setNext" text="Next" />
             </children>
         </AnchorPane>
     </children>
