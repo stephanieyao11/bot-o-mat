@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2-internal"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.ControllerStart">
+    <children>
+        <AnchorPane prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <ImageView fitHeight="430.0" fitWidth="800.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../media/robotBackground.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="start" layoutX="126.0" layoutY="177.0" mnemonicParsing="false" onAction="#setStart"
+                        text="Start">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <effect>
+                        <Lighting bumpInput="$null">
+                            <light>
+                                <Light.Distant>
+                                    <color>
+                                        <Color red="1.0" green="0.8979166746139526" blue="0.7731481194496155" />
+                                    </color>
+                                </Light.Distant>
+                            </light>
+                        </Lighting>
+                    </effect>
+                </Button>
+                <Label layoutX="350.0" layoutY="124.0" prefHeight="53.0" prefWidth="203.0" text="Bot-O-Mat "
+                       textFill="#73fc83">
+                    <font>
+                        <Font size="35.0" />
+                    </font></Label>
+            </children></AnchorPane>
+    </children>
+</VBox>
+
