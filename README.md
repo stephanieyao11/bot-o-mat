@@ -1,4 +1,13 @@
 # BOT-O-MAT
+
+How to run the application in IntelliJ:
+1. Open application in IntelliJ
+2. Go to file, project structure and then add the javadx-sdk-11.0.2 lib
+3. Go to run, edit configurations, and change VM options to
+--module-path /Users/stephanieyao/Documents/javafx-sdk-11.0.2/lib --add-modules javafx.controls,javafx.fxml,javafx.media
+4. Run the main method in IntelliJ
+5. Enjoy!
+
 Use any language to complete this challenge. The implementation is up to you: it can be a command-line application or have a graphical interface.
 
 A housecleaning service wants to automate their process using robots and needs your help to create robots that can complete a variety of tasks.
