@@ -18,6 +18,7 @@ import java.io.IOException;
 
 public class ControllerStart extends Main {
     protected static Player model;
+    protected static Player model1;
     @FXML
     private Button start;
 

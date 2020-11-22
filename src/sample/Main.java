@@ -59,13 +59,13 @@ public class Main extends Application {
         String path = "src/sample/media/farm.mp3";
 
         //Instantiating Media class
-        //Media media = new Media(new File(path).toURI().toString());
+        Media media = new Media(new File(path).toURI().toString());
 
         //Instantiating MediaPlayer class
-        //MediaPlayer mediaPlayer = new MediaPlayer(media);
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
 
         //by setting this property to true, the audio will be played
-        //mediaPlayer.setAutoPlay(true);
+        mediaPlayer.setAutoPlay(true);
         stage = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("views/welcome.fxml"));
         primaryStage.setTitle("Bot-O-Mat");

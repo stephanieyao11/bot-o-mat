@@ -21,13 +21,13 @@
                         <Font size="38.0" />
                     </font>
                 </Label>
-                <Label layoutX="51.0" layoutY="153.0" text="Name" textFill="WHITE">
+                <Label layoutX="51.0" layoutY="100.0" text="Name" textFill="WHITE">
                     <font>
                         <Font size="18.0" />
                     </font>
                 </Label>
-                <TextField fx:id="name" layoutX="50.0" layoutY="191.0" prefHeight="23.0" prefWidth="114.0" promptText="Enter Name" />
-                <ComboBox fx:id="robotCombo" layoutX="300.0" layoutY="191.0" prefWidth="90.0" promptText="Choose Robot Type">
+                <TextField fx:id="name" layoutX="50.0" layoutY="150.0" prefHeight="23.0" prefWidth="114.0" promptText="Enter Name" />
+                <ComboBox fx:id="robotCombo" layoutX="300.0" layoutY="150.0" prefWidth="90.0" promptText="Choose Robot Type">
                     <items>
                         <FXCollections fx:factory="observableArrayList">
                             <String fx:value="Unipedal" />
@@ -39,6 +39,24 @@
                         </FXCollections>
                     </items>
                 </ComboBox>
+
+
+                <TextField fx:id="name1" layoutX="50.0" layoutY="200.0" prefHeight="23.0" prefWidth="114.0" promptText="Enter Name" />
+                <ComboBox fx:id="robotCombo1" layoutX="300.0" layoutY="200.0" prefWidth="90.0" promptText="Choose Robot Type">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Unipedal" />
+                            <String fx:value="Bipedal" />
+                            <String fx:value="Quadrupedal" />
+                            <String fx:value="Arachnid" />
+                            <String fx:value="Radial" />
+                            <String fx:value="Aeronautical" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+
+
                 <Button fx:id="next" layoutX="279.0" layoutY="342.0" mnemonicParsing="false" onAction="#setNext" text="Next" />
             </children>
         </AnchorPane>

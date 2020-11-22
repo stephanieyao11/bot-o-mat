@@ -23,11 +23,23 @@ public class ControllerConfig extends ControllerStart {
     private ComboBox robotCombo;
 
     @FXML
+    private TextField name1;
+
+    @FXML
+    private ComboBox robotCombo1;
+
+
+    @FXML
     public void setNext(ActionEvent actionEvent) throws IOException {
         String value = (String) robotCombo.getValue();
         String text = name.getText();
+        String value1 = (String) robotCombo1.getValue();
+        String text1 = name1.getText();
         if (!(text.isBlank() || text.isEmpty())) {
-            model = new Player(text, value);
+            model = new Player(text, value, 0);
+            if (!(text1.isBlank() || text1.isEmpty())) {
+                model1 = new Player(text1, value1, 0);
+            }
             Parent root = FXMLLoader.load(getClass().getResource("../views/task.fxml"));
             stage.setScene(new Scene(root, 600, 494));
             stage.show();
